@@ -1,0 +1,139 @@
+<!-- All three of us worked on html and styling-->
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>New Kid on The Block</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+        <link type="text/css" rel="stylesheet" href="style.css">
+    </head>
+
+    <body class ="grey lighten-3">
+
+        <nav class="nav-extended cyan darken-2">
+            <div class="nav-wrapper">
+                <h5>New Kid on the Block <br></span></h5>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                </ul>
+            </div>
+        </nav>
+
+        <div class ="row">
+            <div>
+                <div class="col s12">
+                    <div>
+                        <p id ="intro" class="center-align cyan-text text-darken-2 flow-text">Hello, new kid on the block. We know that moving to a new city can be stressful, and we are here to help. We have gathered resources to make you excited about your new home!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class ="col s3">
+
+            </div>
+            <div class="col s6">
+                <div class="slider float-center">
+                    <ul class="slides">
+                        <li>
+                            <img class="responsive-img" src="images/image3.jpg">
+                            <div class="caption center-align">
+                                <h3>Where will you land next?</h3>
+                            </div>
+                        </li>
+                        <li>
+                            <img class="responsive-img" src="images/image2.jpg">
+                            <div class="caption left-align">
+                                <h3>Explore your new home</h3>
+                            </div>
+                        </li>
+                        <li>
+                            <img class="responsive-img" src="images/image1.jpg">
+                            <div class="caption right-align">
+                                <h3>Meet new friends</h3>
+                            </div>
+                        </li>
+                        <li>
+                            <img class="responsive-img" src="images/image4.jpg">
+                            <div class="caption center-align">
+                                <h3>Have fun!</h3>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class ="container">
+            <div class="row">
+                <div class="col s12  card">
+                    <form id ="form">
+                        <h4 class="center-align cyan-text text-darken-2">Tell us where your new home is!</h4>
+
+                        <div class="col s3">
+                        </div>
+
+                        <div class="input-field col s6" id="name">
+                            <label for="name-input">First Name: </label>
+                            <input class="form-control " id="name-input" class = "validate" name ="fname" type="text" required>
+                        </div>
+
+                        <div class="input-field col s6" id ="address">
+                            <label for="address-input">Enter Address Line: </label>
+                            <input class="form-control " id="address-input" name="address" type="text" required>
+                        </div>
+
+                        <div class="input-field col s6" id="city">
+                            <label for="city-input">Enter City: </label>
+                            <input class="form-control" id="city-input" name="city" type="text" required>
+                        </div>
+
+                        <div class="input-field col s6" id ="state">
+                            <label for="state-input">Enter State (2-character ISO code): </label>
+                            <input class="form-control" id="state-input" name ="state" type="text" required>
+                        </div>
+
+                        <div class="input-field col s6" id ="zip">
+                            <label for="zip-input">Enter Zip </label>
+                            <input class="form-control" id="zip-input" name="zip" type="text" required>
+                        </div>
+                        <div class="col s12">
+
+                        </div>
+
+                        <div class="col s12 center-align section">
+                            <button class="btn waves-effect waves-light cyan darken-2" id="letsGo" type="submit" name="action">Let's Go!
+                            </button>
+                        </div>
+
+                        <div class="col s12">
+
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+
+        <footer>
+            <div class="footer-test footer-copyright cyan darken-2 white-text" class="container2">
+                <div class ="footer">&#9400; 2017 Copyright Elena Charlie Nicola</div>
+            </div>
+        </footer>
+
+    </body>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/validate.js/0.11.1/validate.min.js"></script>
+    <script type="text/javascript" src ="userForm.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.4.0/firebase.js"></script>
+
+
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<!-- All three of us worked on html and styling-->
+    <head>
+        <title>New Kid on The Block</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link type="text/css" rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    </head>
+
+    <body class ="grey lighten-3">
+
+        <nav class="nav-extended cyan darken-2">
+            <div class="nav-wrapper">
+                <h5 id ="addWeather">Welcome, </h5>
+
+            </div>
+        </nav>
+
+        <a class="btn-floating btn-large cyan darken-2" href ="index.html"><i class="material-icons right">home</i></a>
+
+        <div class="container">
+            <div class="row">
+                <div class="col s12 m4">
+                    <div class="card medium">
+                        <div class="card-image">
+                            <img class="responsive-image" src = "images/explore.jpeg" alt = "Explore" id="exploreImage">
+                         </div>
+                        <div class="card-content center flow-text">
+                            <p>Explore!</p>
+                            <div>
+                                <a class='dropdown-button btn center flow-text cyan darken-2' data-activates='ExploreDropDown'>Explore!</a>
+
+                                <!-- Dropdown Structure -->
+                                <ul id='ExploreDropDown' class='dropdown-content'>
+
+
+                                </ul>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col s12 m4">
+                    <div class="card medium">
+                        <div class="card-image">
+                            <img class="responsive-image" src = "images/meetup.jpg" alt = "Find Friends" id="MeetPeople">
+                        </div>
+                        <div class="card-content center flow-text">
+                            <p>Meet new people!</p>
+                            <div>
+                                <a class='dropdown-button btn center flow-text cyan darken-2' data-activates='meetUpDropDown'>Socialize!</a>
+
+                                <!-- Dropdown Structure -->
+                                <ul id='meetUpDropDown' class='dropdown-content'>
+
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col s12 m4">
+                    <div class="card medium">
+                        <div class="card-image">
+                            <img class="responsive-image" src = "images/job.jpeg" alt = "Find a Job" id="FindJob">
+                            <!-- <span class="card-title">Find Restaurants</span> -->
+                        </div>
+                        <div class="card-content center flow-text">
+                            <p>Find a Job!</p>
+                            <div>
+                                <a class='dropdown-button btn center flow-text cyan darken-2' data-activates='jobDropDown'>Find a Job!</a>
+
+                                <!-- Dropdown Structure -->
+                                <ul id='jobDropDown' class='dropdown-content '>
+
+
+                                </ul>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col s12 center flow-text">
+                <div class="weather">
+                    <div class="location"></div>
+                    <div class="temp_f"></div>
+                </div>
+            </div>
+        </div>
+
+        <br>
+
+        <div class = "container">
+            <div class = "row">
+                <div class="col s12 center flow-text">
+                    <div id = "insertFirebase" class ="cyan-text text-darken-2">
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class = "container">
+            <div class = "row">
+                <div class="col s12 center flow-text">
+                    <div id = "insertRecommendationsHere">
+                    <!-- This div will be populated using jQuery based on the imagebutton they select above. For example, if the user selects real estate,
+                    then this div will populate with real estate recommendations. If they select find friends after real estate, the real estate options will be
+                    replaced by meetup options-->
+                        <ul class ="collapsible" data-collapsible="accordion" id="title">
+
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class = "row">
+                <div class="col s12 center flow-text">
+                    <div class="wrapper"></div>
+                </div>
+            </div>
+
+        </div>
+        <footer>
+            <div class="footer-test footer-copyright cyan darken-2 white-text" class="container2">
+                <div class ="footer">&#9400; 2017 Copyright Elena Charlie Nicola</div>
+            </div>
+        </footer>
+
+
+
+
+        <!-- jQuery is required by Materialize to function -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+
+        <script type="text/javascript" src ="logic.js">
+        </script>
+    </body>
+
+
+
+</html>

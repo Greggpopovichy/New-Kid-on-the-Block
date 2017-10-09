@@ -1,0 +1,71 @@
+.slider {
+	margin-top: 40px;
+}
+.brand-logo {
+	font-family: 'Raleway', sans-serif;
+	
+}
+ a {
+	 font-family: 'Raleway', sans-serif;
+ }
+
+.card-panel {
+	margin-top: 40px;
+	width: 485.75px;
+	height: 400px;
+
+}
+
+.white-text {
+	font-family: 'Raleway', sans-serif;
+	font-size: 30px;
+	text-align: justify;
+}
+
+.btn {
+	text-align: center;
+}
+
+.responsive-image{
+
+	height:200px;
+}
+.nav-wrapper h5 {
+	font-size: 20px;
+	line-height: 120%;
+	margin: 20px;
+	text-align: center;
+	padding: 20px;
+	font-family: 'Raleway', sans-serif;
+}
+body {
+	font-family: 'Raleway', sans-serif;
+}
+a {
+	margin-right: 20px;
+}
+a:link {
+	color: white;
+
+}
+nav ul {
+	margin-right: 20px;
+}
+
+.footer-test {
+	height:40px;
+}
+.footer{
+	font-size: 8px;
+	padding-top: 15px;
+	text-align: center;
+}
+
+#intro{
+	padding-left: 40px;
+	padding-right:40px;
+}
+
+.image {
+	margin: 10px;
+}
