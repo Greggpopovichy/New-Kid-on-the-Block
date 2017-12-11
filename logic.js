@@ -28,8 +28,7 @@ $(document).ready(function() {
     var radius = 25;
     var clickCounter = 0;
 
-    //EP Display Images using masonry.js
-
+    //Display Images using masonry.js
     var ajaxModule = function(){};
         ajaxModule.prototype = {
             iterator: 1,
@@ -58,7 +57,7 @@ $(document).ready(function() {
                     error: function(response) {
                         console.log(response);
                     }
-                })
+                });
 
                 ajaxRequest.then(function() {
                     if(callback) {
@@ -96,14 +95,14 @@ $(document).ready(function() {
                 // $(".loading").hide();
                 $(".wrapper").show();
             }
-        }
+        };
 
         var newModule = new ajaxModule();
 
         $(function() {
             //newModule.init("", callback);
             newModule.init(city);
-        })
+        });
 
         var timeoutClear;
         // $(".searchInput").keyup(function() {
@@ -143,7 +142,7 @@ $(document).ready(function() {
     longitude = localStorage.getItem("longitude");
 
 
-    //NL add Firebase. Loop through each child and count how many times the city appears while incrementing count variable.
+    //adding Firebase. Loop through each child and count how many times the city appears while incrementing count variable.
     //count variable = amount of people moving to that city
 
     database.ref().on("child_added", function(snapshot) {
@@ -155,8 +154,6 @@ $(document).ready(function() {
             clickCounter++;
         }
 
-
-
         // Handle the errors
     }, function(errorObject) {
         console.log("Errors handled: " + errorObject.code);
@@ -164,7 +161,7 @@ $(document).ready(function() {
 
 
 
-    //NL Populate Drop Down menus with categories
+    //Populate Drop Down menus with categories
 
     for (i = 0; i < MeetUpCategories.length; i++) {
 
@@ -194,9 +191,6 @@ $(document).ready(function() {
         $("#jobDropDown").append(newItem);
 
     }
-    //End drop down menu categories
-
-
 
     //EP - Weather Underground API. Add weather and name to header of page
     $.ajax({
@@ -221,7 +215,7 @@ $(document).ready(function() {
             $("#insertFirebase").append(clickCounter + " other people are moving to " + city + "!");
     });
     
-    //Nicola - called meetup API, Charlie - display Meetup Api
+    //Meetup API to display events and meetups
     $('.meetup').click(function () {
         $("#title").empty()
         var getCategory = $(this).text();
@@ -267,26 +261,6 @@ $(document).ready(function() {
 
                 $(addBody).append("<h6>" + location + "</h6>");
 
-                //Yo here is the shit I'm trying to get to work. Basically it would be dope to have a modal that displays the extended description of the group.
-                //I'm seeing the button but I can't figure out how to make it fire.
-                //$(addBody).append(
-
-                //     "<button data-target='modal1' class='btn modal-trigger'>open</button>" +
-                // //"<a class='waves-effect waves-light btn modal-trigger' href='#modal-content'>open</a>" +
-                //     "<div id='modal1' class='modal'>" +
-                //         "<div id='modal-content'>" +
-                //             "<h4></h4>" +
-                //             "<p>" + description + "</p>" +
-                //         "</div>"+
-                //     "<div class='modal-footer'>" +
-                //     "<button data-target='modal1' class='btn modal-trigger'>close</button>" +
-                //     "</div>"+
-                //     "</div>");
-                // $("#btn").on("click", function(){
-                //     $('#modal1').modal();
-                //     $('#modal1').modal('open');
-                // });
-
                 $("#title").append(addLi);
                 addLi.append(addHeader);
                 addLi.append(addBody);
@@ -295,7 +269,7 @@ $(document).ready(function() {
         });
     });
 
-    //charlie - call and display foursquare api
+    //foursquare api to display things to do
     $(".explore").on("click", function () {
         $("#title").empty()
         var getCategory = $(this).text();
@@ -373,7 +347,7 @@ $(document).ready(function() {
 
     });
 
-    //nicola call api (charlie and nicola worked together to display API)
+    //Dice API to display job data
     $('.findJob').click(function () {
         //put find job api here.
         $("#title").empty();

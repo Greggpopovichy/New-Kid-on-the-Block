@@ -16,15 +16,9 @@ $(document).ready(function() {
 
     var database = firebase.database();
 
-    //NL did userform and data validation
-
     $("#letsGo").on("click", function (event) {
-        //add buttons for each category in MeetUpCategories
-
         //if you comment the next five lines, the validation is different
         $(".red-text").empty()
-
-
 
         event.preventDefault();
         //when user clicks submit, save values. Month is optional, so only save if value is not null.
@@ -87,21 +81,18 @@ $(document).ready(function() {
             $("#zip").append("<div class ='red-text'>A five digit zip code is required</div>")
         }
 
-
-
-
         //EP save city to firebase
         var newEntry = {
             city: city
-        }
+        };
 
         database.ref().push(newEntry);
 
-        // NL - if all validations meet requirements then redirect to next page
+        // If all validations meet requirements then redirect to next page
 
         if (validateName && validateAddress && validateCity && validateState && validateZip) {
             window.location.replace("home.html");
         }
     })
 
-})
+});
