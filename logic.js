@@ -28,7 +28,7 @@ $(document).ready(function() {
     var radius = 25;
     var clickCounter = 0;
 
-    //Display Images using masonry.js
+    //Display Images of cities using masonry.js
     var ajaxModule = function(){};
         ajaxModule.prototype = {
             iterator: 1,
