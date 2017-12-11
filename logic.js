@@ -346,7 +346,7 @@ $(document).ready(function() {
         });
 
     });
-
+    //As of October 2017, the Dice API has been shut down :(. This would normally pull job listings.
     //Dice API to display job data
     $('.findJob').click(function () {
         //put find job api here.
