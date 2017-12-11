@@ -4,4 +4,6 @@ Technology used: \
 -Javascript, jQuery, Firebase \
 -Materialize.css \
 -Masonry.js \
--Meetup, Foursquare, Dice.com APIs
+-APIs: Meetup, Foursquare, Dice.com 
+
+![ALT IMAGE](https://user-images.githubusercontent.com/19658046/33856508-57bc5556-de96-11e7-9e47-59e7e6f639b0.png)
